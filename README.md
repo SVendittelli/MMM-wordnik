@@ -1,6 +1,6 @@
 MMM-wordnik
 ===
-[MagicMirror](https://github.com/MichMich/MagicMirror) Module to display the word of the day with its definition. Uses the wordnik API.
+[MagicMirror](https://github.com/MichMich/MagicMirror) Module to display the word of the day, its definition, and origin. Uses the wordnik API.
 
 Dependancies:
 ---
