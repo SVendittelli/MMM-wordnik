@@ -1,14 +1,15 @@
 MMM-wordnik
 ===
-MagicMirror Module to display the word of the day. Uses wordnik API.
+[MagicMirror](https://github.com/MichMich/MagicMirror) Module to display the word of the day with its definition. Uses the wordnik API.
 
 Dependancies:
 ---
-[wordnik-python](https://github.com/wordnik/wordnik-python) --- `sudo pip install wordnik`
+* [python-shell](https://www.npmjs.com/package/python-shell) --- `npm install python-shell`
+* [wordnik-python](https://github.com/wordnik/wordnik-python) --- `sudo pip install wordnik`
 
 Setup:
 ---
-* Get an api key from [wordnik]().
+* Get an api key from [wordnik](http://developer.wordnik.com/).
 * Add the following to your config:
 ````javascript
 {
@@ -22,4 +23,5 @@ Setup:
 
 TODO:
 ---
-* Give example uses? (Python is already capable)
+* Give examples? (Python is already capable)
+* * _Clean up code_
