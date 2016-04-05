@@ -47,13 +47,26 @@ Module.register('MMM-wordnik',{
 		//verb-transitive: 'vt',
 	},
 	
+	default: {
+		api_key: ""
+	},
+	
 	start: function() {
 		Log.log('Sarting module: ' + this.name)
 		
 		this.fadeSpeed = 2000;
 		
 		this.loaded = false;
-		this.sendSocketNotification('RUN', 'Starting');
+		this.sendSocketNotification('GET WORD', this.config.api_key);
+		
+		var self = this;
+		setInterval(function() {
+			self.updateWord();
+		}, 12*60*60*1000);
+	},
+	
+	updateWord: function() {
+		this.sendSocketNotification('GET WORD', this.config.api_key);
 	},
 	
 	// Override dom generator.
@@ -89,7 +102,7 @@ Module.register('MMM-wordnik',{
 		originWrap.style.border = '3px solid purple';
 		//*/
 		dictWrap.style.textAlign = 'justify';
-		dictWrap.style.maxWidth = '33%';
+		dictWrap.style.maxWidth = '50%';
 		
 		//wordWrap.style.marginRight = '10px';
 		//pronounceWrap.style.marginRight = '10px';
@@ -130,4 +143,3 @@ Module.register('MMM-wordnik',{
 		}
 	},
 });
-

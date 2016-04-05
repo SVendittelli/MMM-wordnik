@@ -8,7 +8,7 @@ def print_json(type, message):
 	sys.stdout.flush()
 
 apiUrl = 'http://api.wordnik.com/v4'
-apiKey = 'a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5'
+apiKey = sys.argv[1]
 client = swagger.ApiClient(apiKey, apiUrl)
 
 wordApi = WordApi.WordApi(client)
@@ -16,6 +16,7 @@ wordsApi = WordsApi.WordsApi(client)
 wordOfTheDay = wordsApi.getWordOfTheDay()
 
 try:
+	#Throws error if it doesn't have a pronunciation
 	pronounce = wordApi.getTextPronunciations(wordOfTheDay,typeFormat='ahd')[0].raw
 	
 	#for example in wordOfTheDay.examples:
