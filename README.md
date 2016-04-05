@@ -1,0 +1,2 @@
+# MMM-wordnik
+MagicMirror Module
