@@ -5,7 +5,7 @@ MMM-wordnik
 Dependancies:
 ---
 * [python-shell](https://www.npmjs.com/package/python-shell) --- `npm install python-shell`
-* [wordnik-python](https://github.com/wordnik/wordnik-python) --- `sudo pip install wordnik`
+* [wordnik-python3](https://github.com/wordnik/wordnik-python3) --- `sudo pip install wordnik-py3`
 
 Setup:
 ---
@@ -13,10 +13,10 @@ Setup:
 * Add the following to your config:
 ````javascript
 {
-	module: 'MMM-wordnik',
-	position: 'lower_third',
+	module: "MMM-wordnik",
+	position: "lower_third",
 	config: {
-		api_key: <YOUR API KEY>
+		api_key: "<YOUR API KEY>"
 	}
 }
 ````
