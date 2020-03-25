@@ -17,7 +17,7 @@ wordOfTheDay = wordsApi.getWordOfTheDay()
 
 try:
 	#Throws error if it doesn't have a pronunciation
-	pronounce = wordApi.getTextPronunciations(wordOfTheDay,typeFormat='ahd')[0].raw
+	pronounce = wordApi.getTextPronunciations(wordOfTheDay.word,typeFormat='ahd')[0].raw
 	
 	#for example in wordOfTheDay.examples:
 		#print example.text
